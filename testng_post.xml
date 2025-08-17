@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Rest Assured Learning ATB13X">
+    <test verbose="2" preserve-order="true" name="C:/Users/kadam/IdeaProjects/ATB13XAPIAutomationProgram">
+        <classes>
+            <class name="ex_04_RestAssured_HTTP_Methods.Post.APITesting_Lab07_POST_NonBDDStyle">
+
+            </class>
+        </classes>
+    </test>
+</suite>

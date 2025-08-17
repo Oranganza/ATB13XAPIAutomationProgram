@@ -1,4 +1,4 @@
-package com.tester;
+package com.tester.ex_01_RA_Basics;
 
 import io.restassured.RestAssured;
 
