@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel-Method" parallel="tests" thread-count="3">
+    <test name="API">
+        <classes>
+            <class name="ex_05_testng_example.parallel.TestcaseLevel.APISmoke"/>
+        </classes>
+    </test>
+    <test name="DB">
+        <classes>
+            <class name="ex_05_testng_example.parallel.TestcaseLevel.DatabaseSmoke"/>
+        </classes>
+    </test>
+            <test name="UI">
+                <classes>
+                <class name="ex_05_testng_example.parallel.TestcaseLevel.UISmoke"/>
+            </classes>
+            </test>
+</suite>

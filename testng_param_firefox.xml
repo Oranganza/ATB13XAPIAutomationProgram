@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Rest Assured Learning ATB13X">
+    <test verbose="2" preserve-order="true" name="C:/Users/kadam/IdeaProjects/ATB13XAPIAutomationProgram">
+        <parameter name="browser" value="firefox"></parameter>
+
+
+        <classes>
+            <class name="ex_05_testng_example.APITesting_Lab17_testng_Parameter">
+
+            </class>
+        </classes>
+    </test>
+</suite>
