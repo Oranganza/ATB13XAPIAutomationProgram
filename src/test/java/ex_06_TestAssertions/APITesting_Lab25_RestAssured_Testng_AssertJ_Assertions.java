@@ -2,6 +2,8 @@ package ex_06_TestAssertions;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.internal.path.json.JSONAssertion;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
@@ -60,10 +62,14 @@ public class APITesting_Lab25_RestAssured_Testng_AssertJ_Assertions {
         vr.body("booking.depositpaid", Matchers.equalTo(true));
 
         //Testng - Extract the details of firstname , last name, bookingid, depositepaid
-
         bookingId = response.then().extract().path("bookingid");
         String firstname = response.then().extract().path("booking.firstname");
         String lastname = response.then().extract().path("booking.lastname");
+
+        //Another mechanism to extract Json, value by JSON path
+
+        JsonPath jsonPath = new JsonPath(response.asString());
+        String bookingID1 = jsonPath.getString("bookingId");
 
         // Testng assertion = 75%
         // Soft Assertion vs hard assertion(90%)
