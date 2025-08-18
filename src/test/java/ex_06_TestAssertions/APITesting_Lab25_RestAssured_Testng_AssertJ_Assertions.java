@@ -61,16 +61,25 @@ public class APITesting_Lab25_RestAssured_Testng_AssertJ_Assertions {
         vr.body("booking.lastname", Matchers.equalTo("Brown"));
         vr.body("booking.depositpaid", Matchers.equalTo(true));
 
-        //Testng - Extract the details of firstname , last name, bookingid, depositepaid
+        //Concept 1 -Testng - Extract the details of firstname , last name, bookingid, depositepaid
         bookingId = response.then().extract().path("bookingid");
         String firstname = response.then().extract().path("booking.firstname");
         String lastname = response.then().extract().path("booking.lastname");
 
-        //Another mechanism to extract Json, value by JSON path
+        //concept 2 - Another mechanism to extract Json, value by JSON path
 
         JsonPath jsonPath = new JsonPath(response.asString());
         String bookingID1 = jsonPath.getString("bookingId");
 
+        assertThat(jsonPath.getInt("bookingid")).isEqualTo("1260");
+        assertThat(jsonPath.getString("booking.firstname")).isEqualTo("Pramod");
+        assertThat(jsonPath.getString("booking.lastname")).isEqualTo("Brown");
+        assertThat(jsonPath.getInt("booking.totalprice")).isEqualTo(3000);
+        assertThat(jsonPath.getBoolean("booking.depositpaid")).isEqualTo(true);
+
+
+
+         // Testng extract the details of the firstname, lastname, booking id
         // Testng assertion = 75%
         // Soft Assertion vs hard assertion(90%)
         // This means any assertion fail,
