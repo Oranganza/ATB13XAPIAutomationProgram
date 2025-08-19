@@ -92,7 +92,7 @@ public class APITesting_Lab25_RestAssured_Testng_AssertJ_Assertions {
         //AssertJ (3rd - lib, assertion) 20%
 
         assertThat(bookingId).isNotNegative().isNotZero().isPositive();
-        assertThat(firstname).isNotBlank().isNotNull().isNotEmpty().isEqualTo();
+        assertThat(firstname).isNotBlank().isNotNull().isNotEmpty().isEqualTo("Pramod");
 
     }
 }
